@@ -1,4 +1,6 @@
 const { ApolloServer, gql } = require("apollo-server");
+const { fileLoader } = require('merge-graphql-schemas');
+const path = require('path');
 
 // toda request é POST
 // toda request bate no mesmo endpoint (/graphql)
@@ -6,6 +8,9 @@ const { ApolloServer, gql } = require("apollo-server");
 // query => obter informações GET
 // mutation => manipular dados (POST/PUT/PATCH/DELETE)
 // scalar types => string, int, boolean, float e ID
+
+
+
 
 const typeDefs = gql`
   type User {
