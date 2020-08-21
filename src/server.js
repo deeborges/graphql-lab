@@ -5,6 +5,8 @@ function serverInit({ typeDefs, resolvers }) {
 	Mongoose.connect('mongodb://localhost:27017/graphql', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
+	}).finally(() => {
+		console.log('...')
 	});
 	
 	const server = new ApolloServer({ typeDefs, resolvers });

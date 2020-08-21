@@ -7,7 +7,9 @@ export default {
   },
 
   Mutation: {
-    createPost: (_, { data }) => Post.create(data),
+    createPost: (_, { data }) => {
+      return Post.create(data);
+    },
     updatePost: (_, { id, data }) => Post.findByIdAndUpdate(id, data, { new: true }),
     deleteUser: async (_, { id }) => {
       const deleted = await Post.findByIdAndDelete(id);
