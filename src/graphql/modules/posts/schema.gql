@@ -9,6 +9,7 @@ input PostInput {
   title: String!
   content: String!
   author: ID!
+  active: Boolean
 }
 
 type Query {
